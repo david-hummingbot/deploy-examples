@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  gateway:
+    container_name: gateway
+    image: hummingbot/gateway:latest
+    ports:
+      - "15888:15888"
+      - "8080:8080"
+    volumes:
+      - "./gateway_files/conf:/home/gateway/conf"
+      - "./gateway_files/logs:/home/gateway/logs"
+      - "./gateway_files/db:/home/gateway/db"
+      - "./hummingbot_files/certs:/home/gateway/certs"
+    environment:
+      - GATEWAY_PASSPHRASE=a
