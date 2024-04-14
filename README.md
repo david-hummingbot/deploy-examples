@@ -1,2 +1,2 @@
 # deploy-examples
-Hummingbot Script
+Hummingbot Docker Compose Templates
